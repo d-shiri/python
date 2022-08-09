@@ -7,6 +7,7 @@ Created on Tue Aug 9 | 23:58:44 2022
 
 """
 import os
+import time
 
 # Get the resolution of the terminal window
 row, _ = os.get_terminal_size()
