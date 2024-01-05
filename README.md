@@ -1,2 +1,2 @@
 # python
-Python files here.
+Python projects here.
