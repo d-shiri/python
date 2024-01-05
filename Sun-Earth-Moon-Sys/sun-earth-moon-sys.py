@@ -1,5 +1,6 @@
 """
 Simulation of 3 body system with turtle lib
+Author: D-Shiri
 """
 
 import turtle
