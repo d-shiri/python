@@ -3,6 +3,6 @@ This Python script provides a 3D simulation of the motion of the Sun, Earth, and
 
 Prerequisites
 Before running the simulation, ensure you installed VPython 
-´´´bash
+`
 pip install vpython
-´´´
+`
