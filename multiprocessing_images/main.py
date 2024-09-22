@@ -31,18 +31,22 @@ def cpu_heavy(img_name: str) -> None:
 if __name__ == '__main__':
     t1 = time.perf_counter()
     images *= 10
-    # for img in images:
-    #      cpu_heavy(img)
-    # processes = []
-    # for img in images:
-    #     process = multiprocessing.Process(target=cpu_heavy, args=(img,))
-    #     process.start()
-    #     processes.append(process)
     
-    # for p in processes:
-    #     p.join()
-    # with multiprocessing.Pool() as pool:
-    #     pool.map(cpu_heavy, images)
+    for img in images:
+         cpu_heavy(img)
+         
+    with multiprocessing.Pool() as pool:
+        pool.map(cpu_heavy, images)
+        
+    processes = []
+    for img in images:
+        process = multiprocessing.Process(target=cpu_heavy, args=(img,))
+        process.start()
+        processes.append(process)
+    
+    for p in processes:
+        p.join()
+
     
     with ProcessPoolExecutor() as exe:
         [exe.submit(cpu_heavy, img) for img in images]
