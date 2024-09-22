@@ -6,7 +6,7 @@ from langs import translations
 from general import format_number, get_bot_info
 
 
-bot_token = '7522509081:AAHHedK4to9AzoPLFTdRBt6TiMO7weU6l3I'
+bot_token = 'YOUR_TOKEN_HERE'
 bot = telebot.TeleBot(bot_token)
 bot_info_url = f"https://api.telegram.org/bot{bot_token}/getUpdates"
 bot.set_webhook()
