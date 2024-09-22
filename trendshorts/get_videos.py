@@ -3,7 +3,7 @@
 from googleapiclient.discovery import build
 import datetime
 
-API_KEY = 'AIzaSyBRPjYEDRZl2BwEwWOiLdj-QDyGcA0gTv0'
+API_KEY = 'YOUT-TOKEN-HERE'
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 def get_n_days(n: int) -> str:
